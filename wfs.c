@@ -1,4 +1,4 @@
-#include <wfs.h>
+#include "wfs.h"
 #include <fuse.h>
 #include <stdio.h>
 #include <string.h>
@@ -43,43 +43,43 @@ static int wfs_getattr(const char *path, struct stat *stbuf)
 }
 
 // Placeholder
-static int wfs_mknod(const char *path, struct stat *stbuf)
+static int wfs_mknod(const char *path, mode_t mode, dev_t dev)
 {
     return 0; // Return 0 on success
 }
 
 // Placeholder
-static int wfs_mkdir(const char *path, struct stat *stbuf)
+static int wfs_mkdir(const char *path, mode_t mode)
 {
     return 0; // Return 0 on success
 }
 
 // Placeholder
-static int wfs_unlink(const char *path, struct stat *stbuf)
+static int wfs_unlink(const char *path)
 {
     return 0; // Return 0 on success
 }
 
 // Placeholder
-static int wfs_rmdir(const char *path, struct stat *stbuf)
+static int wfs_rmdir(const char *path)
 {
     return 0; // Return 0 on success
 }
 
 // Placeholder
-static int wfs_read(const char *path, struct stat *stbuf)
+static int wfs_read(const char *path, char *buf, size_t size, off_t offset, struct fuse_file_info *fi)
 {
     return 0; // Return 0 on success
 }
 
 // Placeholder
-static int wfs_write(const char *path, struct stat *stbuf)
+static int wfs_write(const char *path, const char *buf, size_t size, off_t offset, struct fuse_file_info *fi)
 {
     return 0; // Return 0 on success
 }
 
 // Placeholder
-static int wfs_readdir(const char *path, struct stat *stbuf)
+static int wfs_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset, struct fuse_file_info *fi)
 {
     return 0; // Return 0 on success
 }
