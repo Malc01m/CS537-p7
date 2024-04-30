@@ -7,6 +7,9 @@
 #include "wfs.h"
 // #include <fuse.h>
 
+//Turn on/off debug statements
+int debug_statements = 0;
+
 char *disk_img;
 int num_inodes = -1;
 int num_blocks = -1;
@@ -14,7 +17,6 @@ int num_blocks = -1;
 void parse_args(int argc, char **argv)
 {
     // Print Debug Statements Y = 1 N = 0
-    int debug_statements = 0;
 
     int input_value;
     while ((input_value = getopt(argc, argv, "d:i:b:")) != -1)
